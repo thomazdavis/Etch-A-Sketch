@@ -1,10 +1,18 @@
 body {
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: rgb(36, 3, 3);
+}
+
+#reset-btn {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 #container {
@@ -16,9 +24,8 @@ body {
 }
 
 .grid-square {
-    width: 60px;
-    height: 60px;
     box-sizing: border-box;
     border: 1px solid black;
     background-color: rgb(215, 207, 169);
 }
+

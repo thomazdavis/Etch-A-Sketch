@@ -14,8 +14,16 @@ function createGrid(squaresPerSide) {
         square.style.width = `${squareSize}px`;
         square.style.height = `${squareSize}px`;
 
+        let noOfInteractions = 0;
+
         square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = 'black';
+            if (noOfInteractions === 0) {
+                square.style.backgroundColor = 'blue';
+                square.style.opacity = '0.1';
+            } else if (noOfInteractions < 10) {
+                square.style.opacity = (parseFloat(square.style.opacity) + 0.1).toString();
+            }
+            noOfInteractions++;
         });
     
         container.appendChild(square);
